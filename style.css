@@ -120,6 +120,10 @@ section p {
 	line-height: 200%;
 }
 
+.soft i{
+	margin-top: 0px;
+}
+
 /* PROJET */
 
 .picturesProjects{
@@ -211,4 +215,27 @@ h4{
 
 footer{
 	margin-bottom: 40px;
+	color: #7f8c8d;
+}
+
+.contact a{
+	color: #7f8c8d;
+}
+
+.contact a:hover{
+	color: #2ecc71;
+}
+
+#citation{
+	margin-top:50px;
+	font-size: 28px;
+	color: #323232;
+}
+
+#auteurCitation{
+	font-style: italic;
+}
+
+.banner h3{
+	margin-top: 75px;
 }
