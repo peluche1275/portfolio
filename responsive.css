@@ -1,0 +1,140 @@
+
+
+@media screen and (max-width: 1280px) {
+
+    div #nameAndTitleInTheHeader {
+        height: 600px;
+        padding-top: 100px;
+        margin-bottom: 100px;
+        margin-top: 0px
+    }
+
+    #projects img{
+        width: 400px;
+        height: 424px
+    }
+
+    #hobbies img{
+        width: 400px;
+        height: 225px;
+    }
+
+    #formation img{
+        width: 190px;
+        height: 190px;
+    }
+
+}
+
+
+@media  screen and (max-width: 1024px) {
+
+   div #nameAndTitleInTheHeader {
+        height: 600px;
+        padding-top: 0px;
+        margin-bottom: 0px;
+        margin-top: 50px
+    }
+
+    #nameAndTitleInTheHeader h1{
+        font-size: 100px;
+        padding-top:50px
+    }
+
+    #projects img{
+        width: 300px;
+        height: 313px
+    }
+
+    #hobbies img{
+        width: 300px;
+        height: 168px;
+    }
+
+   
+}
+
+@media screen and (max-width: 1000px){
+
+    .banner{
+        height: auto;
+        padding-bottom: 70px;
+    }
+
+    .code{
+        padding-top: 70px;
+    }
+
+    .banner i{
+        font-size: 40px;
+    }
+
+}
+
+@media screen and (max-width: 990px){
+    #projects img{
+        margin-top: 40px;
+    }
+
+    .soft i{
+        display: none;
+    }
+}
+
+@media screen and (max-width: 800px) {
+
+    header #myNameInTheHeader{
+        font-size: 50px;
+        
+    }
+
+    #nameAndTitleInTheHeader h1{
+        font-size: 80px;
+    }
+
+    i{
+        font-size: 20px;
+    }
+
+}
+
+
+@media screen and (max-width: 600px) {
+
+    #nameAndTitleInTheHeader h1{
+        font-size: 48px;
+    }
+
+    .code p{
+        font-size: 20px;
+        margin-left: -50px;
+    }
+
+    h2{
+        font-size: 36px;
+    }
+
+    section .pre{
+        padding-top: 50px;
+        padding-bottom: 75px;
+    }
+
+}
+
+@media screen and (max-height: 750px){
+    div #nameAndTitleInTheHeader {
+        height: 400px;
+        padding-top: 0px;
+        margin-bottom: 0px;
+        margin-top: 50px
+    }
+}
+
+
+
+
+
+
+
+
+
