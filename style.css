@@ -16,8 +16,6 @@ a:hover {
 	text-decoration: none;
 }
 
-/* border: #E05749 3px solid; */
-
 /* HEADER */
 
 header {
@@ -69,51 +67,23 @@ header input, #menuCheckboxIcon {
 	display: none;
 }
 
-/* 
-
-header a {
-	color: #ffffff;
-}
-
-header #myNameInTheHeader, .titleQuestion {
-	font-family: 'Kaushan Script', cursive;
-	font-size: 72px;
-}
-
-header h1 {
-	font-family: 'Montserrat', sans-serif;
-	font-size: 150px;
-	font-weight: bolder;
-}
-
-#nameAndTitleInTheHeader {
-	height: 850px;
-	padding-top: 150px;
-}
-
-nav {
-	border-top: 2px white solid;
-	padding-top: 15px;
-	text-align: center;
-	text-transform: uppercase;
-} */
-
 /* SECTIONS */
 
-.pre {
-	padding-top: 100px;
-	padding-bottom: 150px;
+section {
+	margin-top:20px;
+	margin-bottom: 20px;
 }
 
 .titleQuestion {
-	font-size: 30px;
-	color: #323232;
+	color: #aaaaaa;
 }
 
+
 h2 {
-	font-family: 'Montserrat', sans-serif;
+	font-family: 'Raleway', sans-serif;
 	text-transform: uppercase;
 	font-size: 45px;
+	margin-top:0px
 }
 
 hr {
@@ -125,7 +95,7 @@ hr {
 }
 
 section p {
-	color: #7f8c8d;
+	color: #777777;
 	line-height: 200%;
 }
 
@@ -156,6 +126,8 @@ section p {
 	border-radius: 300px;
 	filter: grayscale(30%);
 }
+
+
 
 /* COMPETENCES */
 

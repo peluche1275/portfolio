@@ -1,32 +1,26 @@
 /* smartphone */
 
 @media only screen and (max-width: 767px) {
-
     /* HEADER */
-
     #myNameInTheHeader {
         font-size: 30px;
     }
-
     h1 {
         font-size: 40px;
     }
-
-    header input, #menuCheckboxIcon{
-    display: block;
+    header input, #menuCheckboxIcon {
+        display: block;
     }
-
-    header input{
+    header input {
         visibility: hidden;
     }
-
-    nav{
+    nav {
         position: fixed;
-        background-color: rgba(0, 0,0, 0.5);
+        background-color: rgba(0, 0, 0, 0.5);
         width: 105%;
         height: 100%;
         top: -100%;
-        left:0px;
+        left: 0px;
         z-index: 1;
         display: flex;
         justify-content: center;
@@ -34,12 +28,14 @@
         flex-direction: column;
         transition: 0.7s;
     }
+    #menuCheckbox:checked~nav {
+        top: 0px;
+    }
+    /* SECTION */
 
-    #menuCheckbox:checked ~ nav{
-		top: 0px;
-	}
-
-
+    .titleQuestion {
+        font-size: 20px;
+    }
 }
 
 /* smartphone en mode portait */
@@ -48,219 +44,57 @@
     h1 {
         font-size: 40px;
     }
-
-    header input, #menuCheckboxIcon{
+    header input, #menuCheckboxIcon {
         display: block;
-        }
-    
-        header input{
-            visibility: hidden;
-        }
-    
-        nav{
-            position: fixed;
-            background-color: rgba(0, 0,0, 0.5);
-            width: 105%;
-            height: 100%;
-            top: -100%;
-            left:0px;
-            z-index: 1;
-            display: flex;
-            justify-content: center;
-            align-content: center;
-            flex-direction: column;
-            transition: 0.7s;
-        }
-    
-        #menuCheckbox:checked ~ nav{
-            top: 0px;
-        }
+    }
+    header input {
+        visibility: hidden;
+    }
+    nav #navmenu {
+        position: fixed;
+        background-color: rgba(0, 0, 0, 0.5);
+        width: 105%;
+        height: 100%;
+        top: -100%;
+        left: 0px;
+        z-index: 1;
+        display: flex;
+        justify-content: center;
+        align-content: center;
+        flex-direction: column;
+        transition: 0.7s;
+    }
+    #menuCheckbox:checked~nav {
+        top: 0px;
+    }
+
 }
 
 /* tablettes et ordinateurs */
 
 @media only screen and (min-width: 768px) {
-
     /* HEADER */
-
     #myNameInTheHeader {
         font-size: 60px;
     }
-
     h1 {
         font-size: 70px;
     }
 
 }
 
-/* 
--------------------------
+/* écran large */
 
-<style style="text/css">
-div.slide-right {
-  width:100%;
-  overflow:hidden;
-}
-div.slide-right p {
-  animation: 10s slide-right;
-}
-
-@keyframes slide-right {
-  from {
-    margin-left: -100%;
-    width: 300%; 
-  }
-
-  to {
-    margin-left: 0%;
-    width: 100%;
-  }
-}
-</style>
-
-<div class="slide-right">
-<p>Everything is funny, as long as it's happening to somebody else.</p>
-</div>
-
----------------------- */
-
-
-
-/* @media screen and (max-width: 1280px) {
-
-    div #nameAndTitleInTheHeader {
-        height: 600px;
-        padding-top: 100px;
-        margin-bottom: 100px;
-        margin-top: 0px
-    }
-
-    #projects img{
-        width: 400px;
-        height: 424px
-    }
-
-    #hobbies img{
-        width: 400px;
-        height: 225px;
-    }
-
-    #formation img{
-        width: 190px;
-        height: 190px;
-    }
-
-}
-
-
-@media  screen and (max-width: 1024px) {
-
-   div #nameAndTitleInTheHeader {
-        height: 600px;
-        padding-top: 0px;
-        margin-bottom: 0px;
-        margin-top: 50px
-    }
-
-    #nameAndTitleInTheHeader h1{
+@media only screen and (min-width: 1281px) {
+    #myNameInTheHeader {
         font-size: 100px;
-        padding-top:50px
     }
-
-    #projects img{
-        width: 300px;
-        height: 313px
+    h1 {
+        font-size: 120px;
+        margin-bottom: 100px;
     }
-
-    #hobbies img{
-        width: 300px;
-        height: 168px;
-    }
-
-   
-}
-
-@media screen and (max-width: 1000px){
-
-    .banner{
-        height: auto;
-        padding-bottom: 70px;
-    }
-
-    .code{
-        padding-top: 70px;
-    }
-
-    .banner i{
-        font-size: 40px;
-    }
-
-}
-
-@media screen and (max-width: 990px){
-    #projects img{
-        margin-top: 40px;
-    }
-
-    .soft i{
-        display: none;
+    nav {
+        border-top: 2px solid #ffffff;
+        padding-top: 30px;
     }
 }
-
-@media screen and (max-width: 800px) {
-
-    header #myNameInTheHeader{
-        font-size: 50px;
-        
-    }
-
-    #nameAndTitleInTheHeader h1{
-        font-size: 80px;
-    }
-
-    i{
-        font-size: 20px;
-    }
-
-}
-
-
-@media screen and (max-width: 600px) {
-
-    #nameAndTitleInTheHeader h1{
-        font-size: 48px;
-    }
-
-    .code p{
-        font-size: 20px;
-        margin-left: -50px;
-    }
-
-    h2{
-        font-size: 36px;
-    }
-
-    section .pre{
-        padding-top: 50px;
-        padding-bottom: 75px;
-    }
-
-}
-
-@media screen and (max-height: 750px){
-    div #nameAndTitleInTheHeader {
-        height: 400px;
-        padding-top: 0px;
-        margin-bottom: 0px;
-        margin-top: 50px
-    }
-}
-
-
-
-
-
-
-
-
- */
