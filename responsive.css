@@ -1,6 +1,132 @@
+/* smartphone */
+
+@media only screen and (max-width: 767px) {
+
+    /* HEADER */
+
+    #myNameInTheHeader {
+        font-size: 30px;
+    }
+
+    h1 {
+        font-size: 40px;
+    }
+
+    header input, #menuCheckboxIcon{
+    display: block;
+    }
+
+    header input{
+        visibility: hidden;
+    }
+
+    nav{
+        position: fixed;
+        background-color: rgba(0, 0,0, 0.5);
+        width: 105%;
+        height: 100%;
+        top: -100%;
+        left:0px;
+        z-index: 1;
+        display: flex;
+        justify-content: center;
+        align-content: center;
+        flex-direction: column;
+        transition: 0.7s;
+    }
+
+    #menuCheckbox:checked ~ nav{
+		top: 0px;
+	}
 
 
-@media screen and (max-width: 1280px) {
+}
+
+/* smartphone en mode portait */
+
+@media only screen and (max-width: 767px) and (orientation: portrait) {
+    h1 {
+        font-size: 40px;
+    }
+
+    header input, #menuCheckboxIcon{
+        display: block;
+        }
+    
+        header input{
+            visibility: hidden;
+        }
+    
+        nav{
+            position: fixed;
+            background-color: rgba(0, 0,0, 0.5);
+            width: 105%;
+            height: 100%;
+            top: -100%;
+            left:0px;
+            z-index: 1;
+            display: flex;
+            justify-content: center;
+            align-content: center;
+            flex-direction: column;
+            transition: 0.7s;
+        }
+    
+        #menuCheckbox:checked ~ nav{
+            top: 0px;
+        }
+}
+
+/* tablettes et ordinateurs */
+
+@media only screen and (min-width: 768px) {
+
+    /* HEADER */
+
+    #myNameInTheHeader {
+        font-size: 60px;
+    }
+
+    h1 {
+        font-size: 70px;
+    }
+
+}
+
+/* 
+-------------------------
+
+<style style="text/css">
+div.slide-right {
+  width:100%;
+  overflow:hidden;
+}
+div.slide-right p {
+  animation: 10s slide-right;
+}
+
+@keyframes slide-right {
+  from {
+    margin-left: -100%;
+    width: 300%; 
+  }
+
+  to {
+    margin-left: 0%;
+    width: 100%;
+  }
+}
+</style>
+
+<div class="slide-right">
+<p>Everything is funny, as long as it's happening to somebody else.</p>
+</div>
+
+---------------------- */
+
+
+
+/* @media screen and (max-width: 1280px) {
 
     div #nameAndTitleInTheHeader {
         height: 600px;
@@ -137,4 +263,4 @@
 
 
 
-
+ */
