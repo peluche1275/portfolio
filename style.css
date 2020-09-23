@@ -67,6 +67,24 @@ header input, #menuCheckboxIcon {
 	display: none;
 }
 
+.responsiveOnly{
+	margin-top: 50px;
+	display: none;
+	font-size: 30px;
+}
+
+.responsiveOnly i{
+	margin-left: 5px;
+	margin-right: 5px;
+}
+
+.responsiveOnly p{
+	color: #7f8c8d;
+	margin-bottom: 0px;
+	font-size: 15px;
+	font-style: italic;
+}
+
 /* SECTIONS */
 
 section {
@@ -108,9 +126,8 @@ section p {
 }
 
 .banner i, #projects i {
-	font-size: 140px;
+	font-size: 100px;
 	color: #323232;
-	margin-top: 60px;
 }
 
 .banner i:hover, #projects i:hover {
@@ -132,13 +149,16 @@ section p {
 /* COMPETENCES */
 
 .skills i {
-	margin-top: 60px;
 	font-size: 100px;
 	color: #323232;
 }
 
 .skills p {
 	line-height: 200%;
+}
+
+.skills .row{
+	margin-top: 30px;
 }
 
 .soft i {
@@ -249,8 +269,6 @@ footer {
 }
 
 #citation {
-	margin-top: 50px;
-	font-size: 28px;
 	color: #323232;
 }
 
