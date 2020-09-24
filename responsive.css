@@ -57,6 +57,18 @@
         max-width: 200px;
     }
 
+    /* FORMATION  */
+
+    .picturesFormation{
+        width: 30%;
+    }
+
+    /* SOFT SKILLS */
+
+    .soft p {
+        margin-bottom: 16px;
+    }
+
 }
 
 /* tablettes et ordinateurs */
@@ -78,7 +90,11 @@
         height: auto;
     }
 
-    /* CODER PROPREMENT */
+    /* FORMATION */
+
+    .picturesFormation{
+        width: 50%;
+    }
 
     
 
