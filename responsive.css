@@ -41,40 +41,20 @@
     .titleQuestion {
         font-size: 20px;
     }
-}
 
-/* smartphone en mode portait */
+    /* PROJECT */
 
-@media only screen and (max-width: 767px) and (orientation: portrait) {
-    h1 {
-        font-size: 40px;
-    }
-    header input, #menuCheckboxIcon {
-        display: block;
-    }
-    header input {
-        visibility: hidden;
-    }
-    nav #navmenu {
-        position: fixed;
-        background-color: rgba(0, 0, 0, 0.7);
-        width: 105%;
-        height: 100%;
-        top: -100%;
-        left: 0px;
-        z-index: 1;
-        display: flex;
-        justify-content: center;
-        align-content: center;
-        flex-direction: column;
-        transition: 0.7s;
-    }
-    #menuCheckbox:checked~nav {
-        top: 0px;
+    .picturesProjects {
+        width: 297px;
+        height: 314px;
     }
 
-    .responsiveOnly{
-        display: block;
+    /* CODER PROPREMENT */
+
+    .pictureCleancode{
+        width: 100%;
+        height: auto;
+        max-width: 200px;
     }
 
 }
@@ -89,6 +69,18 @@
     h1 {
         font-size: 70px;
     }
+
+    /* PROJECT */
+
+    .picturesProjects {
+        width: 100%;
+        max-width: 100%;
+        height: auto;
+    }
+
+    /* CODER PROPREMENT */
+
+    
 
 }
 

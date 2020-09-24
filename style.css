@@ -171,13 +171,16 @@ section p {
 	border-radius: 50px;
 }
 
-#projects h3 {
-	margin-top: 50px;
-	margin-bottom: 50px;
+#projects .row{
+	margin-bottom: 30px;
+}
+
+.titleAndIcons{
+	margin-bottom: 30px;
 }
 
 #projects i {
-	font-size: 100px;
+	font-size: 20px;
 }
 
 li {
@@ -276,6 +279,3 @@ footer {
 	font-style: italic;
 }
 
-.banner h3 {
-	margin-top: 75px;
-}
