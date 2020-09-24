@@ -142,98 +142,7 @@
 		<section class="skills">
 			<div class="container">
 
-				<div class="row d-flex align-items-center">
-					<div class="col-md-12">
-						<p class="titleQuestion">
-							Quelles technologies j'utilise ?
-						</p>
-						<br />
-						<h2>
-							Compétences Techniques
-						</h2>
-						<hr>
-					</div>
-				</div>
-
-				<div class="row d-flex align-items-center">
-					<div class="col-md-4">
-						<i class="fab fa-vuejs"></i>
-					</div>
-					<div class="col-md-8">
-						<h3>Vue.JS</h3>
-						<p>Blablabla Vue.JS
-						</p>
-					</div>
-				</div>
-
-				<div class="row d-flex align-items-center">
-					<div class="col-md-4">
-						<i class="fab fa-js-square"></i>
-					</div>
-					<div class="col-md-8">
-						<h3>JavaScript</h3>
-						<p>J'utilise du Javascript dans quasi tout mes projets. J'aime beaucoup l'utilisation de la
-							technologie Ajax.
-						</p>
-					</div>
-				</div>
-
-				<div class="row d-flex align-items-center">
-					<div class="col-md-4">
-						<i class="fab fa-node-js"></i>
-					</div>
-					<div class="col-md-8">
-						<h3>NodeJS</h3>
-						<p> J'apprends en ce moment à utiliser la NodeJS, j'essaye d'explorer toutes ses possibilités
-						</p>
-					</div>
-				</div>
-
-				<div class="row d-flex align-items-center">
-					<div class="col-md-4">
-						<i class="fab fa-bootstrap"></i>
-					</div>
-					<div class="col-md-8">
-						<h3>Bootstrap</h3>
-						<p>J'aime bien ce framework CSS , je l'utiliser surtout pour avoir un layout responsive,
-							d'ailleurs
-							ce site est fait avec Bootstrap.</p>
-					</div>
-				</div>
-
-				<div class="row d-flex align-items-center">
-					<div class="col-md-4">
-						<i class="fab fa-php"></i>
-					</div>
-					<div class="col-md-8">
-						<h3>PHP</h3>
-						<p>C'est avec le PHP que j'ai appris la programmation orientée objets ainsi que l'architecture
-							MVC.
-							J'ai également durant ma formation construit un framework PHP. </p>
-					</div>
-				</div>
-
-				<div class="row d-flex align-items-center">
-					<div class="col-md-4">
-						<i class="fab fa-python"></i>
-					</div>
-					<div class="col-md-8">
-						<h3>Python</h3>
-						<p>Dans le but de m'améliorer et de voir d'autre horizons j'ai commencé à apprendre le Python.
-							J'apprécie particulièrement l'utilité de l'indentation.</p>
-					</div>
-				</div>
-
-				<div class="row d-flex align-items-center">
-					<div class="col-md-4">
-						<i class="fas fa-question"></i>
-					</div>
-					<div class="col-md-8">
-						<h3>Ouvert à tout</h3>
-						<p>J'insiste sur ce point, je suis ouvert à tout langages, framework, technologies.. </p>
-					</div>
-				</div>
-
+				<skill v-for="item in skills" v-bind:info="item"></skill>
 
 			</div>
 		</section>
@@ -257,7 +166,7 @@
 						<p class="titleQuestion">
 							Qu'est ce que j'ai fait ?
 						</p>
-						<br />
+						
 						<h2>
 							Mes projets
 						</h2>
@@ -399,67 +308,29 @@
 						<p class="titleQuestion">
 							Quelles études ?
 						</p>
-						<br />
+						
 						<h2>
 							Formations
 						</h2>
 						<hr>
 					</div>
 				</div>
-
-				<div class="row d-flex align-items-center">
-					<div class="col-md-4">
-						<img class="picturesFormation" src="pictures/logooc.webp" alt="Logo OpenClassRooms">
-					</div>
-					<div class="col-md-8">
-						<h3>OpenClassRooms</h3>
-						<br>
-						<p>Formation en ligne. Accompagné par un mentor 45 minutes par semaines et évalué, j'ai eu à
-							réalisé
-							5 projets évalué par des professionnels.J'ai appris différents langages web ainsi que les
-							bonnes
-							pratiques en matières de programmation et de SEO.</p>
-					</div>
-				</div>
-
-				<div class="row d-flex align-items-center">
-					<div class="col-md-4">
-						<img class="picturesFormation" src="pictures/logoul.webp" alt="Logo Université de Lille">
-					</div>
-					<div class="col-md-8">
-						<h3>Université de Lille</h3>
-						<br>
-						<p>Parcours universitaire classique. J'ai ici appris les rédiments du parfait commercial. </p>
-					</div>
-				</div>
-
+				<forma v-for="item in forma" v-bind:info="item"></forma>
 			</div>
 		</section>
 
-		<section class="banner code">
-			<div class="container">
-				<div class="row d-flex justify-content-center">
-					<div id="code" contentEditable="true">
-						<p> <span class="codeColorIf">if</span>(<span class="codeColorPonct">!</span><span
-								class="codeColorVar">$lost</span>) {</p>
-						<p> <span class="codeColorVar">$learned</span> <span class="codeColorPonct">=</span> <span
-								class="codeColorZero">0</span>;</p>
-						<p> }</p>
-					</div>
-				</div>
-			</div>
-		</section>
+		<banner-code></banner-code>
+
 		<span id="ancreExperiences"></span>
 
 		<section>
 			<div class="container">
-
 				<div class="row">
 					<div class="col-md-12">
 						<p class="titleQuestion">
 							Que faisais - je avant ?
 						</p>
-						<br />
+						
 						<h2>
 							Expériences
 						</h2>
@@ -467,39 +338,13 @@
 					</div>
 				</div>
 
-				<div class="row d-flex align-items-center">
-					<div class="col-md-4">
-						<img class="picturesJob" src="pictures/cosmolys.webp" alt="Logo de Cosmolys">
-					</div>
-					<div class="col-md-8">
-						<h4>Commercial chez Cosmolys</h4>
-						<br>
-						<p>Commercial dans le secteur de la destruction des déchets dangereux. J'ai eu pour mission de
-							réalisé des devis aux prospects et les contrats aux clients. Réalisé le nécessaire pour
-							répondres aux appels d'offres. Ainsi que la formation des clients sur l'application de
-							gestions
-							des déchets.</p>
-					</div>
-				</div>
-
-				<div class="row d-flex align-items-center">
-					<div class="col-md-4">
-						<img class="picturesJob" src="pictures/ramsay.webp" alt="Logo de Ramsay Générale de Santé">
-					</div>
-					<div class="col-md-8">
-						<h4>Administratif chez Ramsay Générale de Santé</h4>
-						<br>
-						<p>Agent administratif, j'avais pour mission d'inscrire les dossiers des patients dans la base
-							de
-							données de l'Hopital. J'avais également à ma charge les stagiaires. </p>
-					</div>
-				</div>
+				<forma v-for="item in job" v-bind:info="item"></forma>
 
 			</div>
 		</section>
 
 		<banner-icon v-for="item in mobilite" v-bind:info="item"></banner-icon>
-		
+
 		<span id="ancreSoftskills"></span>
 
 		<section class="soft skills">
@@ -510,7 +355,7 @@
 						<p class="titleQuestion">
 							Quel humain suis - je ?
 						</p>
-						<br />
+						
 						<h2>
 							Soft Skills
 						</h2>
@@ -581,7 +426,7 @@
 						<p class="titleQuestion">
 							Quelles sont mes centres d'intérets ?
 						</p>
-						<br />
+						
 						<h2>
 							Loisirs
 						</h2>
@@ -645,7 +490,7 @@
 						<p class="titleQuestion">
 							Comment me contacter ?
 						</p>
-						<br />
+						
 						<h2>
 							Contact
 						</h2>
