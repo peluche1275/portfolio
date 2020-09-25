@@ -44,7 +44,8 @@
 
 				<nav id="navmenu" class="row">
 
-					<menu-nav v-for="item in menunav" v-bind:info="item" v-bind:value="item.id" v-bind:key="item.id"></menu-nav>
+					<menu-nav v-for="item in menunav" v-bind:info="item" v-bind:value="item.id" v-bind:key="item.id">
+					</menu-nav>
 
 					<div class="responsiveOnly">
 						<p>Développé avec</p>
@@ -113,102 +114,14 @@
 				</p>
 			</div>
 		</section>
+
 		<span id="ancreProjets"></span>
 		<section id="projects" class="pre">
 			<div class="container">
 
 				<title-section v-for="item in filter(titlesection,1)" v-bind:info="item"></title-section>
 
-				<div class="row d-flex align-items-center">
-					<div class="titleAndIcons col-md-12 d-flex justify-content-center align-items-center">
-						<h3>
-							Tic Tac Toe
-						</h3>
-						<a href="https://github.com/peluche1275/Oxo"><i class="fab fa-github"></i></a>
-						<a href="http://tictactoe.nathanhtml.fr/"><i class="fas fa-globe"></i></a>
-					</div>
-
-					<div class="col-md-6">
-						<p>J'ai réalisé ce projet car je voulais améliorer mon portfolio et travailler sur une IA. </p>
-
-					</div>
-
-					<div class="col-md-6">
-						<img class="picturesProjects" src="pictures/1projet6.webp" alt="jv">
-					</div>
-				</div>
-
-				<div class="row d-flex align-items-center">
-					<div class="titleAndIcons col-md-12 d-flex justify-content-center align-items-center">
-						<h3>
-							Quizz
-						</h3>
-						<a href="https://github.com/peluche1275/Projet-5"><i class="fab fa-github"></i></a><a
-							href="http://projet5.nathanhtml.fr/"><i class="fas fa-globe"></i></a>
-					</div>
-					<div class="col-md-6">
-						<p>Dernier Projet de ma formation où j'utilise la technologie Ajax pour une communication plus
-							rapide avec le serveur. Système de pagination. </p>
-
-					</div>
-					<div class="col-md-6">
-						<img class="picturesProjects" src="pictures/1projet5.webp" alt="jv">
-					</div>
-				</div>
-
-				<div class="row d-flex align-items-center">
-					<div class="titleAndIcons col-md-12 d-flex justify-content-center align-items-center">
-						<h3>
-							Blog d'écrivain
-						</h3>
-						<a href="https://github.com/peluche1275/Projet-4"><i class="fab fa-github"></i></a><a
-							href="http://jeanforteroche.nathanhtml.fr/"><i class="fas fa-globe"></i></a>
-					</div>
-					<div class="col-md-6">
-						<p>Projet de ma formation où l'on apprends à crée un framework et à l'utiliser. C'est aussi avec
-							ce
-							projet que j'ai appris l'architecture Modèle Vue Controleur. </p>
-
-					</div>
-					<div class="col-md-6">
-						<img class="picturesProjects" src="pictures/1projet4.webp" alt="jv">
-					</div>
-				</div>
-
-				<div class="row d-flex align-items-center">
-					<div class="titleAndIcons col-md-12 d-flex justify-content-center align-items-center">
-						<h3>
-							Location de vélo
-						</h3>
-						<a href="https://github.com/peluche1275/Projet-3"><i class="fab fa-github"></i></a><a
-							href="http://locationvelo.nathanhtml.fr/"><i class="fas fa-globe"></i></a>
-					</div>
-					<div class="col-md-6">
-						<p>C'est le projet où je programme pour la première fois. Projet que j'ai recodé en suivant les
-							principes du livre "Clean Code" </p>
-
-					</div>
-					<div class="col-md-6">
-						<img class="picturesProjects" src="pictures/1projet3.webp" alt="jv">
-					</div>
-				</div>
-
-				<div class="row d-flex align-items-center">
-					<div class="titleAndIcons col-md-12 d-flex justify-content-center align-items-center">
-						<h3>
-							Tourisme avec WordPress
-						</h3>
-						<a href="http://ireki.nathanhtml.fr/"><i class="fas fa-globe"></i></a>
-					</div>
-					<div class="col-md-6">
-						<p>Projet réalisé avec le CMS WordPress et du CSS personnalisé. C'est avec ce projet que j'ai
-							utilisé les animations CSS </p>
-
-					</div>
-					<div class="col-md-6">
-						<img class="picturesProjects" src="pictures/1projet2.webp" alt="jv">
-					</div>
-				</div>
+				<projects-section v-for="item in projects" v-bind:info="item"></projects-section>
 
 			</div>
 		</section>
@@ -262,60 +175,12 @@
 
 				<title-section v-for="item in filter(titlesection,4)" v-bind:info="item"></title-section>
 
-				<div class="row d-flex align-items-center">
-					<div class="col-md-12">
-						<h3>
-							Problem Solver
-						</h3>
-					</div>
-					<div class="col-md-8">
-						<p>J'adore trouver le pourquoi du problème : Pourquoi est ce que cela ne marche pas ? Qu'est ce
-							qu'on peut faire pour y remedier ?
-							J'aime comprendre le problème et le régler. </p>
-					</div>
-					<div class="col-md-4">
-						<i class="fas fa-exclamation-triangle"></i>
-					</div>
-				</div>
-
-				<div class="row d-flex align-items-center">
-					<div class="col-md-12">
-						<h3>
-							Stable Mood
-						</h3>
-					</div>
-					<div class="col-md-8">
-						<p>Une de mes qualités est que j'ai l'humeur très stable, très sereine. Je suis d'humeur égale
-							et ça
-							peut importe la situation. </p>
-					</div>
-					<div class="col-md-4">
-						<i class="fas fa-yin-yang"></i>
-					</div>
-				</div>
-
-				<div class="row d-flex align-items-center">
-					<div class="col-md-12">
-						<h3>
-							Clean Coder
-						</h3>
-					</div>
-					<div class="col-md-8">
-						<p>J'aspire à être un bon développeur, être quelqu'un qui code proprement. C'est réellement
-							quelques
-							choses qui m'importe et qui à de la valeur à mes yeux. </p>
-					</div>
-					<div class="col-md-4">
-						<i class="fas fa-code"></i>
-					</div>
-				</div>
+				<soft-skills v-for="item in softskills" v-bind:info="item"></soft-skills>
 
 			</div>
 		</section>
 
-
 		<banner-icon v-for="item in filter(banner,2)" v-bind:info="item"></banner-icon>
-
 
 		<section id="hobbies">
 			<div class="container">
@@ -334,7 +199,7 @@
 		<section class="contact">
 			<div class="container">
 				<title-section v-for="item in filter(titlesection,6)" v-bind:info="item"></title-section>
-				
+
 				<div class="row">
 					<div class="col-md-12">
 						<a href="mailto:nathanaltomare@outlook.fr">

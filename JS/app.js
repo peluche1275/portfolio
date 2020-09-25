@@ -33,8 +33,15 @@ Vue.component('title-section', {
     template: '<div class="row"><div class="col-md-12"><p class="titleQuestion"> {{ info.text }} </p><h2> {{ info.title }} </h2><hr></div></div>'
 })
 
+Vue.component('projects-section', {
+    props: ['info'],
+    template: '<div class="row d-flex align-items-center"><div class="titleAndIcons col-md-12 d-flex justify-content-center align-items-center"><h3>{{ info.title }}</h3><a :href="info.github"><i class="fab fa-github"></i></a><a :href="info.link"><i class="fas fa-globe"></i></a></div><div class="col-md-6"><p>{{ info.text }} </p></div><div class="col-md-6"><img class="picturesProjects" :src="info.picture" alt="view"></div></div>'
+})
 
-
+Vue.component('soft-skills', {
+    props: ['info'],
+    template: '<div class="row d-flex align-items-center"><div class="col-md-12"><h3>{{ info.title }}</h3></div><div class="col-md-8"><p> {{ info.text }} </p></div><div class="col-md-4"><i :class="info.icon"></i></div></div>'
+})
 
 new Vue({
     el: '#app',
@@ -69,6 +76,20 @@ new Vue({
         hobbies: [
             { picture: 'pictures/jeuxvideo.webp', text: 'J\'ai toujours trouvé important de maitriser ses émotions, et pour travailler cette maitrise de soi, il faut la mettre à l\'épreuve ! Rien de tel qu\'un programme développé dans le but de mettre les nerds à l\'épreuve ! ', title: 'Jeux Video.. Difficiles', alt: 'Scène de jeuxvideo' },
             { picture: 'pictures/paintweb.webp', text: 'Le paintball est un sport vraiment intéressant. Au paintball on ne joue pas à la guerre. On essaye de gagner en équipe. En plus de se sentir vivant en pratiquant cette activité, elle aide à la gestion du stress. ', title: 'Paintball', alt: 'Scène de Paintball' }
+        ],
+
+        softskills: [
+            { icon: 'fas fa-exclamation-triangle', text: "J'adore trouver le pourquoi du problème : Pourquoi est ce que cela ne marche pas ? Qu'est ce qu'on peut faire pour y remedier ? J'aime comprendre le problème et le régler. ", title: 'Problem Solver' },
+            { icon: 'fas fa-yin-yang', text: "Une de mes qualités est que j'ai l'humeur très stable, très sereine. Je suis d'humeur égale et ça peut importe la situation. ", title: 'Stable Mood' },
+            { icon: 'fas fa-code', text: "J'aspire à être un bon développeur, être quelqu'un qui code proprement. C'est réellement quelques choses qui m'importe et qui à de la valeur à mes yeux", title: 'Clean Coder' },
+        ],
+
+        projects: [
+            { picture: 'pictures/1projet6.webp', text: 'En écriture', title: 'Tic Tac Toe', link: 'http://tictactoe.nathanhtml.fr/', github: 'https://github.com/peluche1275/Oxo' },
+            { picture: 'pictures/1projet5.webp', text: 'En écriture', title: 'Quizz', link: 'http://projet5.nathanhtml.fr/', github: 'https://github.com/peluche1275/Projet-5' },
+            { picture: 'pictures/1projet4.webp', text: 'En écriture', title: 'Blog d\'écrivain', link: 'http://jeanforteroche.nathanhtml.fr/', github: 'https://github.com/peluche1275/Projet-4' },
+            { picture: 'pictures/1projet3.webp', text: 'En écriture', title: 'Location de vélo', link: 'http://locationvelo.nathanhtml.fr/', github: 'https://github.com/peluche1275/Projet-3' },
+            { picture: 'pictures/1projet2.webp', text: 'En écriture', title: 'Tourisme avec WordPress', link: 'http://ireki.nathanhtml.fr/', github: 'https://github.com/peluche1275' },
         ],
 
         menunav: [
