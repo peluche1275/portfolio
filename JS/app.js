@@ -18,10 +18,30 @@ Vue.component('skill', {
     template: '<div class="row d-flex align-items-center"><div class="col-md-4"><i :class="info.icon"></i></div><div class="col-md-8"><h3>{{ info.title }}</h3><p>{{ info.text }}</p></div></div>'
 })
 
+Vue.component('menu-nav', {
+    props: ['info'],
+    template: '<div class="col-md-2 col-sm-2"><a :href="info.anchor"><p>{{info.text}}</p></a></div>'
+})
+
+Vue.component('hobbies', {
+    props: ['info'],
+    template: '<div class="row d-flex align-items-center"><div class="col-md-12"><h3>{{ info.title }}</h3></div><div class="col-md-8"><p>{{ info.text }} </p></div><div class="col-md-4"><img class="picturesProjects" :src="info.picture" :alt="info.alt"></div></div>'
+})
+
+Vue.component('title-section', {
+    props: ['info'],
+    template: '<div class="row"><div class="col-md-12"><p class="titleQuestion"> {{ info.text }} </p><h2> {{ info.title }} </h2><hr></div></div>'
+})
+
+
+
 
 new Vue({
     el: '#app',
     data: {
+
+        presentation: "Aspirant Développeur Web et fraichement sorti de formation, je suis situé près de Lille, dans les Hauts de France. Profondément ancré dans l'informatique depuis toujours j'ai envie d\'assimiler de nouvelles compétences sans arrêt. Prêt à mettre les mains dans le cambouis et sortant du monde commercial et administratif, j_'ai la capacité d\'interpréter les demandes d\'un client et j\'ai acquis une sensibilité aux normes.",
+
         skills: [
             { icon: 'fab fa-js-square', text: 'J\'utilise du Javascript dans quasi tout mes projets. J\'aime beaucoup l\'utilisation de la technologie Ajax. ', title: 'JavaScript' },
             { icon: 'fab fa-vuejs', text: 'Blablabla Vue.JS ', title: 'Vue.JS' },
@@ -39,14 +59,42 @@ new Vue({
             { class: 'picturesFormation', picture: 'pictures/logooc.webp', text: 'Formation en ligne. Accompagné par un mentor 45 minutes par semaines et évalué, j\'ai eu à réalisé 5 projets évalué par des professionnels.J\'ai appris différents langages web ainsi que les bonnes pratiques en matières de programmation et de SEO.', title: 'OpenClassRooms', alt: 'Logo d\'OpenClassRooms' },
             { class: 'picturesFormation', picture: 'pictures/logoul.webp', text: 'Parcours universitaire classique. J\'ai ici appris les rédiments du parfait commercial.', title: 'Université de Lille', alt: 'Logo de l\'Université de Lille' }
         ],
-        covid: [
-            { text: 'Respect du Covid', title: 'Covid', icon: 'fas fa-head-side-mask' },
+
+        banner: [
+            { id: 0, text: 'Respect du Covid', title: 'Covid', icon: 'fas fa-head-side-mask' },
+            { id: 1, text: 'Dispo immétiatement', title: 'Présentiel HDF ou Full Remote', icon: 'fas fa-laptop-house' },
+            { id: 2, text: 'I can write and read in English. ', title: 'Anglais', icon: 'fas fa-flag-usa' }
         ],
-        mobilite: [
-            { text: 'Dispo immétiatement', title: 'Présentiel HDF ou Full Remote', icon: 'fas fa-laptop-house' },
+
+        hobbies: [
+            { picture: 'pictures/jeuxvideo.webp', text: 'J\'ai toujours trouvé important de maitriser ses émotions, et pour travailler cette maitrise de soi, il faut la mettre à l\'épreuve ! Rien de tel qu\'un programme développé dans le but de mettre les nerds à l\'épreuve ! ', title: 'Jeux Video.. Difficiles', alt: 'Scène de jeuxvideo' },
+            { picture: 'pictures/paintweb.webp', text: 'Le paintball est un sport vraiment intéressant. Au paintball on ne joue pas à la guerre. On essaye de gagner en équipe. En plus de se sentir vivant en pratiquant cette activité, elle aide à la gestion du stress. ', title: 'Paintball', alt: 'Scène de Paintball' }
         ],
-        english: [
-            { text: 'I can write and read in English. ', title: 'Anglais', icon: 'fas fa-flag-usa' },
+
+        menunav: [
+            { id: 0, text: 'Compétences', anchor: '#ancreCompetences' },
+            { id: 1, text: 'Projets', anchor: '#ancreProjets' },
+            { id: 2, text: 'Formations', anchor: '#ancreFormation' },
+            { id: 3, text: 'Expériences', anchor: '#ancreExperiences' },
+            { id: 4, text: 'Soft skills', anchor: '#ancreSoftskills' },
+            { id: 5, text: 'Contact', anchor: '#ancreContact' }
         ],
+
+        titlesection: [
+            { id: 0, title: 'Compétences techniques', text: 'Quelles technologies j\'utilise ? ' },
+            { id: 1, title: 'Mes projets', text: 'Qu`\'est ce que j\'ai fait ? ' },
+            { id: 2, title: 'Formations', text: 'Quelles études ? ' },
+            { id: 3, title: 'Expériences', text: 'Que faisais - je avant ? ' },
+            { id: 4, title: 'Soft skills', text: 'Quel humain suis - je ? ' },
+            { id: 5, title: 'Loisirs', text: 'Quelles sont mes centres d\'intérets ? ' },
+            { id: 6, title: 'Contact', text: 'Comment me contacter ? ' },
+            { id: 7, title: 'Présentation', text: 'Qui suis-je ?' }
+        ]
+    },
+
+    methods: {
+        filter: function (data, index) {
+            return data.filter(item => item.id == index)
+        },
     }
 })

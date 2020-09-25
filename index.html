@@ -43,36 +43,8 @@
 				</label>
 
 				<nav id="navmenu" class="row">
-					<div class="col-md-2 col-sm-2">
-						<a href="#ancreCompetences">
-							<p>Compétences</p>
-						</a>
-					</div>
-					<div class="col-md-2 col-sm-2">
-						<a href="#ancreProjets">
-							<p>Projets</p>
-						</a>
-					</div>
-					<div class="col-md-2 col-sm-2">
-						<a href="#ancreFormation">
-							<p>Formations</p>
-						</a>
-					</div>
-					<div class="col-md-2 col-sm-2">
-						<a href="#ancreExperiences">
-							<p>Expériences</p>
-						</a>
-					</div>
-					<div class="col-md-2 col-sm-2">
-						<a href="#ancreSoftskills">
-							<p>Soft Skills</p>
-						</a>
-					</div>
-					<div class="col-md-2 col-sm-2">
-						<a href="#ancreContact">
-							<p>Contact</p>
-						</a>
-					</div>
+
+					<menu-nav v-for="item in menunav" v-bind:info="item" v-bind:value="item.id" v-bind:key="item.id"></menu-nav>
 
 					<div class="responsiveOnly">
 						<p>Développé avec</p>
@@ -85,30 +57,12 @@
 		<section class="pre">
 			<div class="container">
 
-				<div class="row">
-					<div class="col-md-12">
-						<p class="titleQuestion">
-							Qui suis-je ?
-						</p>
-						<h2>
-							Présentation
-						</h2>
-						<hr>
-					</div>
-				</div>
+				<title-section v-for="item in filter(titlesection,7)" v-bind:info="item"></title-section>
 
 				<div class="row d-flex align-items-center">
 
 					<div class="texte col-md-8 col-sm-8">
-						<p>Aspirant Développeur Web et fraichement sorti de formation, je suis situé près de Lille, dans
-							les
-							Hauts de France. Profondément ancré dans l'informatique depuis toujours j'ai envie
-							d'assimiler
-							de nouvelles compétences sans arrêt. Prêt à mettre les mains dans le cambouis et sortant du
-							monde commercial et administratif, j'ai la capacité d'interpréter les demandes d'un client
-							et
-							j'ai acquis une sensibilité aux normes.
-						</p>
+						<p> {{ presentation }} </p>
 					</div>
 
 					<div class="col-md-4 col-sm-4">
@@ -142,18 +96,7 @@
 		<section class="skills">
 			<div class="container">
 
-				<div class="row d-flex align-items-center">
-					<div class="col-md-12">
-						<p class="titleQuestion">
-							Quelles technologies j'utilise ?
-						</p>
-						<br />
-						<h2>
-							Compétences Techniques
-						</h2>
-						<hr>
-					</div>
-				</div>
+				<title-section v-for="item in filter(titlesection,0)" v-bind:info="item"></title-section>
 
 				<skill v-for="item in skills" v-bind:info="item"></skill>
 
@@ -174,17 +117,8 @@
 		<section id="projects" class="pre">
 			<div class="container">
 
-				<div class="row">
-					<div class="col-md-12">
-						<p class="titleQuestion">
-							Qu'est ce que j'ai fait ?
-						</p>
-						<h2>
-							Mes projets
-						</h2>
-						<hr>
-					</div>
-				</div>
+				<title-section v-for="item in filter(titlesection,1)" v-bind:info="item"></title-section>
+
 				<div class="row d-flex align-items-center">
 					<div class="titleAndIcons col-md-12 d-flex justify-content-center align-items-center">
 						<h3>
@@ -300,18 +234,8 @@
 		<section id="formation" class="pre">
 			<div class="container">
 
-				<div class="row">
-					<div class="col-md-12">
-						<p class="titleQuestion">
-							Quelles études ?
-						</p>
+				<title-section v-for="item in filter(titlesection,2)" v-bind:info="item"></title-section>
 
-						<h2>
-							Formations
-						</h2>
-						<hr>
-					</div>
-				</div>
 				<forma v-for="item in forma" v-bind:info="item"></forma>
 			</div>
 		</section>
@@ -322,43 +246,21 @@
 
 		<section>
 			<div class="container">
-				<div class="row">
-					<div class="col-md-12">
-						<p class="titleQuestion">
-							Que faisais - je avant ?
-						</p>
-
-						<h2>
-							Expériences
-						</h2>
-						<hr>
-					</div>
-				</div>
+				<title-section v-for="item in filter(titlesection,3)" v-bind:info="item"></title-section>
 
 				<forma v-for="item in job" v-bind:info="item"></forma>
 
 			</div>
 		</section>
 
-		<banner-icon v-for="item in mobilite" v-bind:info="item"></banner-icon>
+		<banner-icon v-for="item in filter(banner,1)" v-bind:info="item"></banner-icon>
 
 		<span id="ancreSoftskills"></span>
 
 		<section class="soft skills">
 			<div class="container">
 
-				<div class="row">
-					<div class="col-md-12">
-						<p class="titleQuestion">
-							Quel humain suis - je ?
-						</p>
-
-						<h2>
-							Soft Skills
-						</h2>
-						<hr>
-					</div>
-				</div>
+				<title-section v-for="item in filter(titlesection,4)" v-bind:info="item"></title-section>
 
 				<div class="row d-flex align-items-center">
 					<div class="col-md-12">
@@ -412,81 +314,29 @@
 		</section>
 
 
-		<banner-icon v-for="item in english" v-bind:info="item"></banner-icon>
+		<banner-icon v-for="item in filter(banner,2)" v-bind:info="item"></banner-icon>
 
 
 		<section id="hobbies">
 			<div class="container">
 
-				<div class="row">
-					<div class="col-md-12">
-						<p class="titleQuestion">
-							Quelles sont mes centres d'intérets ?
-						</p>
+				<title-section v-for="item in filter(titlesection,5)" v-bind:info="item"></title-section>
 
-						<h2>
-							Loisirs
-						</h2>
-						<hr>
-					</div>
-				</div>
-
-				<div class="row d-flex align-items-center">
-					<div class="col-md-12">
-						<h3>
-							Jeux Video.. Difficiles
-						</h3>
-					</div>
-					<div class="col-md-8">
-						<p>J'ai toujours trouvé important de maitriser ses émotions, et pour travailler cette maitrise
-							de
-							soi, il faut la mettre à l'épreuve ! Rien de tel qu'un programme développé dans le but de
-							mettre
-							les nerds à l'épreuve ! </p>
-					</div>
-					<div class="col-md-4">
-							<img class="picturesProjects" src="pictures/jeuxvideo.webp" alt="jv">
-					</div>
-				</div>
-
-				<div class="row d-flex align-items-center">
-					<div class="col-md-12">
-						<h3>
-							Paintball
-						</h3>
-					</div>
-					<div class="col-md-8">
-						<p>Le paintball est un sport vraiment intéressant. Au paintball on ne joue pas à la guerre. On
-							essaye de gagner en équipe. En plus de se sentir vivant en pratiquant cette activité, elle
-							aide
-							à la gestion du stress. </p>
-					</div>
-					<div class="col-md-4">
-						<img class="picturesProjects" src="pictures/paintweb.webp" alt="paintball">
-					</div>
-				</div>
+				<hobbies v-for="item in hobbies" v-bind:info="item"></hobbies>
 
 			</div>
 		</section>
 
-		<banner-icon v-for="item in covid" v-bind:info="item"></banner-icon>
+		<banner-icon v-for="item in filter(banner,0)" v-bind:info="item"></banner-icon>
 
 		<span id="ancreContact"></span>
 
 		<section class="contact">
 			<div class="container">
-
+				<title-section v-for="item in filter(titlesection,6)" v-bind:info="item"></title-section>
+				
 				<div class="row">
 					<div class="col-md-12">
-						<p class="titleQuestion">
-							Comment me contacter ?
-						</p>
-
-						<h2>
-							Contact
-						</h2>
-						<hr>
-
 						<a href="mailto:nathanaltomare@outlook.fr">
 							<p>nathanaltomare@outlook.fr</p>
 						</a>
