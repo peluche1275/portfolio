@@ -8,9 +8,6 @@
     h1 {
         font-size: 40px;
     }
-    header input, #menuCheckboxIcon {
-        display: block;
-    }
     header input {
         visibility: hidden;
     }
@@ -28,47 +25,11 @@
         flex-direction: column;
         transition: 0.7s;
     }
-    #menuCheckbox:checked~nav {
-        top: 0px;
+
+    .projects img {
+        width: 250px;
     }
-
-    .responsiveOnly{
-        display: block;
-    }
-
-    /* SECTION */
-
-    .titleQuestion {
-        font-size: 20px;
-    }
-
-    /* PROJECT */
-
-    .picturesProjects {
-        width: 297px;
-        height: 314px;
-    }
-
-    /* CODER PROPREMENT */
-
-    .pictureCleancode{
-        width: 100%;
-        height: auto;
-        max-width: 200px;
-    }
-
-    /* FORMATION  */
-
-    .picturesFormation{
-        width: 30%;
-    }
-
-    /* SOFT SKILLS */
-
-    .soft p {
-        margin-bottom: 16px;
-    }
-
+    
 }
 
 /* tablettes et ordinateurs */
@@ -81,23 +42,16 @@
     h1 {
         font-size: 70px;
     }
-
     /* PROJECT */
-
     .picturesProjects {
         width: 100%;
         max-width: 100%;
         height: auto;
     }
-
     /* FORMATION */
-
-    .picturesFormation{
+    .picturesFormation {
         width: 50%;
     }
-
-    
-
 }
 
 /* écran large */

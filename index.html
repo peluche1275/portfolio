@@ -36,34 +36,31 @@
 						<h1>Développeur Web</h1>
 					</div>
 				</div>
+				<div class="row iconMenu">
 
-				<input type="checkbox" id="menuCheckbox" name="menuCheckbox">
-				<label for="menuCheckbox" class="show-menu-btn">
-					<i id="menuCheckboxIcon" class="fas fa-caret-down"></i>
-				</label>
-
-				<nav id="navmenu" class="row">
-
-					<menu-nav v-for="item in menunav" v-bind:info="item" v-bind:value="item.id" v-bind:key="item.id">
-					</menu-nav>
-
-					<div class="responsiveOnly">
-						<p>Développé avec</p>
-						<i class="fab fa-bootstrap"></i><i class="fab fa-vuejs"></i>
+					<div class="col">
+						<a href="https://www.linkedin.com/in/nathanaltomare/"><i class="fab fa-linkedin"></i></a>
 					</div>
-				</nav>
+
+					<div class="col">
+						<a href="cvnathanaltomare.pdf" aria-label="CV"><i class="fas fa-file-download"></i></a>
+					</div>
+
+					<div class="col">
+						<a href="https://github.com/peluche1275"><i class="fab fa-github"></i></a>
+					</div>
+
+				</div>
+
 			</div>
 		</header>
 
 		<section class="pre">
 			<div class="container">
-
-				<title-section v-for="item in filter(titlesection,7)" v-bind:info="item"></title-section>
-
 				<div class="row d-flex align-items-center">
 
-					<div class="texte col-md-8 col-sm-8">
-						<p> {{ presentation }} </p>
+					<div v-html="presentation" class="texte col-md-8 col-sm-8">
+						{{ presentation }}
 					</div>
 
 					<div class="col-md-4 col-sm-4">
@@ -75,43 +72,7 @@
 
 		<section class="banner d-flex align-items-center">
 			<div class="container">
-				<div class="row">
-
-					<div class="col">
-						<a href="https://www.linkedin.com/in/nathanaltomare/"><i class="fab fa-linkedin"></i></a>
-					</div>
-
-					<div class="col">
-						<a href="cvnathanaltomare.pdf" aria-label="CV"><i class="fas fa-file"></i></a>
-					</div>
-
-					<div class="col">
-						<a href="https://github.com/peluche1275"><i class="fab fa-github"></i></a>
-					</div>
-
-				</div>
-			</div>
-		</section>
-		<span id="ancreCompetences"></span>
-
-		<section class="skills">
-			<div class="container">
-
-				<title-section v-for="item in filter(titlesection,0)" v-bind:info="item"></title-section>
-
-				<skill v-for="item in skills" v-bind:info="item"></skill>
-
-			</div>
-		</section>
-
-		<section class="banner d-flex align-items-center">
-			<div class="container">
-				<p id="citation">
-					"La logique doit être simple pour que les bogues aient du mal à se cacher"
-				</p>
-				<p id="auteurCitation">
-					Bjarne Stroustrup, Inventeur du C++
-				</p>
+				<title-section v-for="item in filter(titlesection,1)" v-bind:info="item"></title-section>
 			</div>
 		</section>
 
@@ -119,80 +80,19 @@
 		<section id="projects" class="pre">
 			<div class="container">
 
-				<title-section v-for="item in filter(titlesection,1)" v-bind:info="item"></title-section>
-
-				<projects-section v-for="item in projects" v-bind:info="item"></projects-section>
-
-			</div>
-		</section>
-
-		<section class="banner cleancode d-flex align-items-center">
-			<div class="container">
-				<div class="row d-flex align-items-center">
-					<div class="col">
-						<img class="pictureCleancode" src="pictures/cleancode.webp"
-							alt="Coder Proprement de Robert C. Martin">
-					</div>
-					<div class="col">
-						<p>
-							ce livre donne énormement de techniques pour avoir un code bien plus propre et bien plus
-							lisible.
-						</p>
-					</div>
+				<div class="row">
+					<projects-section v-for="item in projects" v-bind:info="item"></projects-section>
 				</div>
+
 			</div>
 		</section>
-		<span id="ancreFormation"></span>
 
-		<section id="formation" class="pre">
+		<section class="banner d-flex align-items-center">
 			<div class="container">
-
 				<title-section v-for="item in filter(titlesection,2)" v-bind:info="item"></title-section>
-
-				<forma v-for="item in forma" v-bind:info="item"></forma>
 			</div>
 		</section>
 
-		<banner-code></banner-code>
-
-		<span id="ancreExperiences"></span>
-
-		<section>
-			<div class="container">
-				<title-section v-for="item in filter(titlesection,3)" v-bind:info="item"></title-section>
-
-				<forma v-for="item in job" v-bind:info="item"></forma>
-
-			</div>
-		</section>
-
-		<banner-icon v-for="item in filter(banner,1)" v-bind:info="item"></banner-icon>
-
-		<span id="ancreSoftskills"></span>
-
-		<section class="soft skills">
-			<div class="container">
-
-				<title-section v-for="item in filter(titlesection,4)" v-bind:info="item"></title-section>
-
-				<soft-skills v-for="item in softskills" v-bind:info="item"></soft-skills>
-
-			</div>
-		</section>
-
-		<banner-icon v-for="item in filter(banner,2)" v-bind:info="item"></banner-icon>
-
-		<section id="hobbies">
-			<div class="container">
-
-				<title-section v-for="item in filter(titlesection,5)" v-bind:info="item"></title-section>
-
-				<hobbies v-for="item in hobbies" v-bind:info="item"></hobbies>
-
-			</div>
-		</section>
-
-		<banner-icon v-for="item in filter(banner,0)" v-bind:info="item"></banner-icon>
 
 		<span id="ancreContact"></span>
 
@@ -208,8 +108,14 @@
 						<a href="tel:+33611941190">
 							<p>06 11 94 11 90</p>
 						</a>
-						<a href="https://www.linkedin.com/in/nathanaltomare/"><i class="fab fa-linkedin"></i></a>
-						<a href="https://github.com/peluche1275"><i class="fab fa-github"></i></a>
+
+						<a href="https://www.linkedin.com/in/nathanaltomare/">
+							<p>LinkedIn</p>
+						</a>
+
+						<a href="https://github.com/peluche1275">
+							<p>Github</p>
+						</a>
 					</div>
 				</div>
 
