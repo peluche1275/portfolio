@@ -26,6 +26,7 @@ new Vue({
         ],
 
         projects: [
+            { picture: 'pictures/todolist.webp',  title: 'TodoList', link: 'https://nathan-todolist-node.herokuapp.com/', github: 'https://github.com/peluche1275/todolist-nodejs' },
             { picture: 'pictures/tictactoe.webp',  title: 'Tic Tac Toe', link: 'http://tictactoe.nathanhtml.fr/', github: 'https://github.com/peluche1275/Oxo' },
             { picture: 'pictures/quizz.webp',  title: 'Quizz', link: 'http://projet5.nathanhtml.fr/', github: 'https://github.com/peluche1275/Projet-5' },
             { picture: 'pictures/forteroche.webp', title: 'Blog d\'écrivain', link: 'http://jeanforteroche.nathanhtml.fr/', github: 'https://github.com/peluche1275/Projet-4' },
